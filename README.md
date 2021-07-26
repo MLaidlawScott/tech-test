@@ -55,9 +55,17 @@ The Backend is written using the [NestJs](https://nestjs.com/) Node.js framework
 
 [Redux Toolkit](https://redux-toolkit.js.org/) is the recommended way of using Redux. It also includes a great tool called RTK Query which allows you to easily implement api calls whilst exposing useful hooks for your components. It uses Thunks under the hood.
 
+## Material-UI
+
+[Material-UI](https://material-ui.com/) is a component library that follows the material design guidelines.
+
 ### Prisma & SQLite
 
 [Prisma](https://www.prisma.io/) is a Node.js and Typescript ORM. It is used in this project to interface with an SQLite database.
+
+### Testing
+
+[Cypress](https://www.cypress.io/) is used for end-to-end testing. [Jest](https://jestjs.io/) is used as out test runner. [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) would be used for component testing if required.
 
 ## Decisions and Notes
 
@@ -66,3 +74,4 @@ The Backend is written using the [NestJs](https://nestjs.com/) Node.js framework
 - Having libraries for RTK slices and apis would allow codesharing between web apps and react native apps.
 - Testing opportunities for this were minimal so I have decided to include a test in the backend and an end-to-end test using cypress.
 - I have used feature branches from master and frequent commits. In a production codebase a develop branch would also be used.
+- Nx creates a lot of files that are not needed for a project this small. In some cases these are left as an example as to what is possible.
