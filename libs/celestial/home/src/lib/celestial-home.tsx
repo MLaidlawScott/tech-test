@@ -1,5 +1,5 @@
 import { useGetBodiesQuery } from '@pe-test/celestial-store';
-import { CelestialBodyCard } from '@pe-test/atomic-components';
+import { CelestialBodyCard } from '@pe-test/web-component-library';
 import {
   Container,
   Typography,

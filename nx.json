@@ -33,9 +33,6 @@
     ]
   },
   "projects": {
-    "atomic-components": {
-      "tags": []
-    },
     "celestial-api": {
       "tags": []
     },
@@ -59,6 +56,9 @@
       "tags": []
     },
     "shared-models": {
+      "tags": []
+    },
+    "web-component-library": {
       "tags": []
     }
   }

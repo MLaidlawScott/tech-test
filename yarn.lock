@@ -2071,7 +2071,7 @@
     url-loader "^3.0.0"
     webpack "4.46.0"
 
-"@nrwl/storybook@12.6.2":
+"@nrwl/storybook@12.6.2", "@nrwl/storybook@^12.6.2":
   version "12.6.2"
   resolved "https://registry.yarnpkg.com/@nrwl/storybook/-/storybook-12.6.2.tgz#c4de526d87b46e17bff9af5b95061f62e9ff9b68"
   integrity sha512-0eozn1XH8lbsnC23elqSfJtZZ7z7v51H79NSYkdaBhuk8Uvk9QINULqQapPo2nSsjrF4u+OVmjz0+WcsW7AgmQ==
