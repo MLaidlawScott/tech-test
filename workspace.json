@@ -226,6 +226,19 @@
           }
         }
       }
+    },
+    "prisma-client": {
+      "root": "libs/prisma-client",
+      "sourceRoot": "libs/prisma-client/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/prisma-client/**/*.ts"]
+          }
+        }
+      }
     }
   },
   "cli": {

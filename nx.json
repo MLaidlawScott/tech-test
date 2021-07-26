@@ -48,6 +48,9 @@
     "celestial-e2e": {
       "tags": [],
       "implicitDependencies": ["celestial"]
+    },
+    "prisma-client": {
+      "tags": []
     }
   }
 }
