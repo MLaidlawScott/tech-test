@@ -1,94 +1,68 @@
+# Tech Test
 
+## How to Run
 
-# PeTest
+After yarn or npm install...
 
-This project was generated using [Nx](https://nx.dev).
+To run frontend and backend use the following command:
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+```
+npx nx run-many --target=serve --projects=celestial-web,celestial-api --parallel
+```
 
-🔎 **Smart, Extensible Build Framework**
+To run tests:
 
-## Adding capabilities to your workspace
+```
+npx nx run-many --all --target=test
+```
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+To run open Cypress for end-to-end tests run the following two commands:
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+```
+npx nx serve celestial-api
+npx nx e2e celestial-web-e2e --watch
+```
 
-Below are our core plugins:
+Then run tests via Cypress.
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+To run linting:
 
-There are also many [community plugins](https://nx.dev/community) you could add.
+```
+npx nx run-many --all --target=lint
+```
 
-## Generate an application
+To run Storybook:
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+```
+npx nx run web-component-library:storybook
+```
 
-> You can use any of the plugins above to generate applications as well.
+## Technologies Used
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+### Nx
 
-## Generate a library
+[Nx](https://nx.dev/) is a build framework that has excellent support for monorepos and code sharing. It also contains a bunch of code gen tools.
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+### NestJs
 
-> You can also use any of the plugins above to generate libraries as well.
+The Backend is written using the [NestJs](https://nestjs.com/) Node.js framework. This framework fully supports TypeScript and has good tools to assist with separation of concerns.
 
-Libraries are shareable across libraries and applications. They can be imported from `@pe-test/mylib`.
+### Storybook
 
-## Development server
+[Storybook](https://storybook.js.org/) is a tool for building UI components in isolation. It is especially useful when working with component libraries.
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+### Redux Toolkit
 
-## Code scaffolding
+[Redux Toolkit](https://redux-toolkit.js.org/) is the recommended way of using Redux. It also includes a great tool called RTK Query which allows you to easily implement api calls whilst exposing useful hooks for your components. It uses Thunks under the hood.
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+### Prisma & SQLite
 
-## Build
+[Prisma](https://www.prisma.io/) is a Node.js and Typescript ORM. It is used in this project to interface with an SQLite database.
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Decisions and Notes
 
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+- The folder structure for this small project could be done in many ways. In a larger project using Nx I would typically have code which can be shared across multiple applications in the top level `./lib` directory. I.e. `./lib/shared-models`
+- For libraries relating to applications they can be nested under another folder, i.e. `./lib/celestial-api/bodies`.
+- Having libraries for RTK slices and apis would allow codesharing between web apps and react native apps.
+- Testing opportunities for this were minimal so I have decided to include a test in the backend and an end-to-end test using cypress.
+- I have used feature branches from master and frequent commits. In a production codebase a develop branch would also be used.
