@@ -104,7 +104,8 @@
           "executor": "@nrwl/web:dev-server",
           "options": {
             "buildTarget": "celestial:build",
-            "hmr": true
+            "hmr": true,
+            "proxyConfig": "apps/celestial/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -124,6 +125,56 @@
           "outputs": ["coverage/apps/celestial"],
           "options": {
             "jestConfig": "apps/celestial/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "celestial-api": {
+      "root": "apps/celestial-api",
+      "sourceRoot": "apps/celestial-api/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/celestial-api",
+            "main": "apps/celestial-api/src/main.ts",
+            "tsConfig": "apps/celestial-api/tsconfig.app.json",
+            "assets": ["apps/celestial-api/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/celestial-api/src/environments/environment.ts",
+                  "with": "apps/celestial-api/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "celestial-api:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/celestial-api/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/celestial-api"],
+          "options": {
+            "jestConfig": "apps/celestial-api/jest.config.js",
             "passWithNoTests": true
           }
         }

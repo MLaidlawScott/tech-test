@@ -39,6 +39,9 @@
     "celestial": {
       "tags": []
     },
+    "celestial-api": {
+      "tags": []
+    },
     "celestial-e2e": {
       "tags": [],
       "implicitDependencies": ["celestial"]
