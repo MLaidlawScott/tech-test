@@ -3,7 +3,7 @@ import { ICelestialBody } from '@pe-test/shared-models';
 
 export const bodiesApi = createApi({
   reducerPath: 'bodies',
-  baseQuery: fetchBaseQuery({ baseUrl: 'h' }),
+  baseQuery: fetchBaseQuery({ baseUrl: '/api/celestial' }),
   endpoints: (builder) => ({
     getBodies: builder.query<ICelestialBody[], void>({
       query: () => 'bodies',
