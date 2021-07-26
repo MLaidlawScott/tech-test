@@ -36,21 +36,24 @@
     "atomic-components": {
       "tags": []
     },
-    "celestial": {
-      "tags": []
-    },
     "celestial-api": {
       "tags": []
     },
     "celestial-api-bodies": {
       "tags": []
     },
-    "celestial-e2e": {
-      "tags": [],
-      "implicitDependencies": ["celestial"]
-    },
     "celestial-home": {
       "tags": []
+    },
+    "celestial-store": {
+      "tags": []
+    },
+    "celestial-web": {
+      "tags": []
+    },
+    "celestial-web-e2e": {
+      "tags": [],
+      "implicitDependencies": ["celestial-web"]
     },
     "prisma-client": {
       "tags": []

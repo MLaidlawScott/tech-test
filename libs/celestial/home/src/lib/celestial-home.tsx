@@ -1,6 +1,8 @@
-import './celestial-home.module.scss';
+import { useGetBodiesQuery } from '@pe-test/celestial-store';
 
-const CelestialHome = () => {
+export const CelestialHome = () => {
+  const { data, error, isLoading } = useGetBodiesQuery();
+
   return (
     <div>
       <h1>Welcome to celestial-home!</h1>

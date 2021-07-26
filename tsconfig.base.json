@@ -19,6 +19,7 @@
       "@pe-test/celestial-api/bodies": [
         "libs/celestial-api/bodies/src/index.ts"
       ],
+      "@pe-test/celestial-store": ["libs/celestial-store/src/index.ts"],
       "@pe-test/celestial/home": ["libs/celestial/home/src/index.ts"],
       "@pe-test/prisma-client": ["libs/prisma-client/src/index.ts"],
       "@pe-test/shared-models": ["libs/shared-models/src/index.ts"]
