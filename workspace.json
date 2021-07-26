@@ -72,27 +72,6 @@
         }
       }
     },
-    "celestial-home": {
-      "root": "libs/celestial/home",
-      "sourceRoot": "libs/celestial/home/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/celestial/home/**/*.{ts,tsx,js,jsx}"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/celestial/home"],
-          "options": {
-            "jestConfig": "libs/celestial/home/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "celestial-store": {
       "root": "libs/celestial-store",
       "sourceRoot": "libs/celestial-store/src",
@@ -205,6 +184,27 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/celestial-web-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "celestial-web-home": {
+      "root": "libs/celestial-web/home",
+      "sourceRoot": "libs/celestial-web/home/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/celestial-web/home/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/celestial-web/home"],
+          "options": {
+            "jestConfig": "libs/celestial-web/home/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

@@ -39,9 +39,6 @@
     "celestial-api-bodies": {
       "tags": []
     },
-    "celestial-home": {
-      "tags": []
-    },
     "celestial-store": {
       "tags": []
     },
@@ -51,6 +48,9 @@
     "celestial-web-e2e": {
       "tags": [],
       "implicitDependencies": ["celestial-web"]
+    },
+    "celestial-web-home": {
+      "tags": []
     },
     "prisma-client": {
       "tags": []
