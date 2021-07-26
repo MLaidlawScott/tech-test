@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pe-test/atomic-components": ["libs/atomic-components/src/index.ts"]
+      "@pe-test/atomic-components": ["libs/atomic-components/src/index.ts"],
+      "@pe-test/celestial-api/bodies": [
+        "libs/celestial-api/bodies/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

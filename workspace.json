@@ -180,6 +180,27 @@
         }
       }
     },
+    "celestial-api-bodies": {
+      "root": "libs/celestial-api/bodies",
+      "sourceRoot": "libs/celestial-api/bodies/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/celestial-api/bodies/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/celestial-api/bodies"],
+          "options": {
+            "jestConfig": "libs/celestial-api/bodies/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "celestial-e2e": {
       "root": "apps/celestial-e2e",
       "sourceRoot": "apps/celestial-e2e/src",
