@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getData(): { message: string } {
-    return { message: 'Welcome to celestial-api!' };
+  healthCheck(): { message: string } {
+    return { message: 'celestial api running.' };
   }
 }
