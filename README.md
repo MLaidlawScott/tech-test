@@ -55,7 +55,7 @@ The Backend is written using the [NestJs](https://nestjs.com/) Node.js framework
 
 [Redux Toolkit](https://redux-toolkit.js.org/) is the recommended way of using Redux. It also includes a great tool called RTK Query which allows you to easily implement api calls whilst exposing useful hooks for your components. It uses Thunks under the hood.
 
-## Material-UI
+### Material-UI
 
 [Material-UI](https://material-ui.com/) is a component library that follows the material design guidelines.
 
@@ -73,5 +73,5 @@ The Backend is written using the [NestJs](https://nestjs.com/) Node.js framework
 - For libraries relating to applications they can be nested under another folder, i.e. `./lib/celestial-api/bodies`.
 - Having libraries for RTK slices and apis would allow codesharing between web apps and react native apps.
 - Testing opportunities for this were minimal so I have decided to include a test in the backend and an end-to-end test using cypress.
-- I have used feature branches from master and frequent commits. In a production codebase a develop branch would also be used.
+- I have used feature branches from master and frequent commits. In a production codebase a develop branch would also be used. For the initial work however I just used branches and merged locally, so pull requests will not be seen on Github.
 - Nx creates a lot of files that are not needed for a project this small. In some cases these are left as an example as to what is possible.
