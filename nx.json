@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "atomic-components": {
+      "tags": []
+    },
     "celestial": {
       "tags": []
     },

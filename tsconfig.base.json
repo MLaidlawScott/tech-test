@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@pe-test/atomic-components": ["libs/atomic-components/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

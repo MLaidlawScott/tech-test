@@ -1,6 +1,27 @@
 {
   "version": 2,
   "projects": {
+    "atomic-components": {
+      "root": "libs/atomic-components",
+      "sourceRoot": "libs/atomic-components/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/atomic-components/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/atomic-components"],
+          "options": {
+            "jestConfig": "libs/atomic-components/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "celestial": {
       "root": "apps/celestial",
       "sourceRoot": "apps/celestial/src",
