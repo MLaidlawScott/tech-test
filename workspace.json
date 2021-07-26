@@ -227,6 +227,27 @@
         }
       }
     },
+    "celestial-home": {
+      "root": "libs/celestial/home",
+      "sourceRoot": "libs/celestial/home/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/celestial/home/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/celestial/home"],
+          "options": {
+            "jestConfig": "libs/celestial/home/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "prisma-client": {
       "root": "libs/prisma-client",
       "sourceRoot": "libs/prisma-client/src",
@@ -236,6 +257,19 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["libs/prisma-client/**/*.ts"]
+          }
+        }
+      }
+    },
+    "shared-models": {
+      "root": "libs/shared-models",
+      "sourceRoot": "libs/shared-models/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/shared-models/**/*.ts"]
           }
         }
       }
