@@ -36,7 +36,11 @@ export const CelestialBodyCard: React.FC<ICelestialBodyCardProps> = ({
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} elevation={6}>
+    <Card
+      className={classes.root}
+      elevation={6}
+      data-testid="celestial-body-card"
+    >
       <CardContent>
         <Typography align="center" gutterBottom variant="h6">
           {celestialBody.name}
