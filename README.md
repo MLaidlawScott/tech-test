@@ -1,5 +1,9 @@
 # Tech Test
 
+## Feedback Comments
+
+- Moved Controller for bodies api to the app layer.
+
 ## How to Run
 
 After yarn or npm install...
@@ -16,7 +20,7 @@ To run tests:
 npx nx run-many --all --target=test
 ```
 
-To run open Cypress for end-to-end tests run the following two commands:
+To run end-to-end tests run the following two commands:
 
 ```
 npx nx serve celestial-api
@@ -65,7 +69,7 @@ The Backend is written using the [NestJs](https://nestjs.com/) Node.js framework
 
 ### Testing
 
-[Cypress](https://www.cypress.io/) is used for end-to-end testing. [Jest](https://jestjs.io/) is used as out test runner. [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) would be used for component testing if required.
+[Cypress](https://www.cypress.io/) is used for end-to-end testing. [Jest](https://jestjs.io/) is used as our test runner. [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) would be used for component testing if required.
 
 ## Decisions and Notes
 

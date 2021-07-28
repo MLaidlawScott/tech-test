@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { ICelestialBody } from '@pe-test/shared-models';
 
-import { CelestialApiBodiesService } from './celestial-api-bodies.service';
+import { CelestialApiBodiesService } from '@pe-test/celestial-api/bodies';
 
 @Controller('bodies')
 export class CelestialApiBodiesController {
