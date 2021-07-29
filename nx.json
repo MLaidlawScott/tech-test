@@ -52,6 +52,9 @@
     "celestial-web-home": {
       "tags": []
     },
+    "hooks": {
+      "tags": []
+    },
     "prisma-client": {
       "tags": []
     },

@@ -3,6 +3,10 @@
 ## Feedback Comments
 
 - Moved Controller for bodies api to the app layer.
+- RTK bundle size: Very heavy in the context of the tech test but used to show modern redux recommended practices. I created a quick custom hook that mimics the data fetching functionality but without redux. I've discussed RTK bundle size with people in the past and I do believe it is worth using if an application is going to use Redux.
+- Too much in lib layer
+  - Redux: completely agree that in this case things are over-engineered. Examples where I think slices/api slices would be good in libs is if you have some shared logic to use across multiple front-end. For example, imagine two microfrontends that have the same login process. The same api slice could be used in both.
+  - Frontend components: again, very over-engineered for the purpose of the tech test. I think either way would work in this case. I tend to do it this way as it is shown this way in the Nx example for micro frontends.
 
 ## How to Run
 
