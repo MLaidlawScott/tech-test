@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import { PrismaClientService } from '@pe-test/prisma-client';
 import { CelestialApiBodiesController } from './celestial-api-bodies.controller';
-import { CelestialApiBodiesService } from './celestial-api-bodies.service';
+import { CelestialApiBodiesService } from '@pe-test/celestial-api/bodies';
 
 describe('CelestialApiBodiesController', () => {
   let controller: CelestialApiBodiesController;

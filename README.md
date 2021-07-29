@@ -1,5 +1,13 @@
 # Tech Test
 
+## Feedback Comments
+
+- Moved Controller for bodies api to the app layer.
+- RTK bundle size: Very heavy in the context of the tech test but used to show modern redux recommended practices. I created a quick custom hook that mimics the data fetching functionality but without redux. I've discussed RTK bundle size with people in the past and I do believe it is worth using if an application is going to use Redux.
+- Too much in lib layer
+  - Redux: completely agree that in this case things are over-engineered. Examples where I think slices/api slices would be good in libs is if you have some shared logic to use across multiple front-end. For example, imagine two microfrontends that have the same login process. The same api slice could be used in both.
+  - Frontend components: again, very over-engineered for the purpose of the tech test. I think either way would work in this case. I tend to do it this way as it is shown this way in the Nx example for micro frontends.
+
 ## How to Run
 
 After yarn or npm install...
@@ -16,7 +24,7 @@ To run tests:
 npx nx run-many --all --target=test
 ```
 
-To run open Cypress for end-to-end tests run the following two commands:
+To run end-to-end tests run the following two commands:
 
 ```
 npx nx serve celestial-api
@@ -65,7 +73,7 @@ The Backend is written using the [NestJs](https://nestjs.com/) Node.js framework
 
 ### Testing
 
-[Cypress](https://www.cypress.io/) is used for end-to-end testing. [Jest](https://jestjs.io/) is used as out test runner. [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) would be used for component testing if required.
+[Cypress](https://www.cypress.io/) is used for end-to-end testing. [Jest](https://jestjs.io/) is used as our test runner. [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) would be used for component testing if required.
 
 ## Decisions and Notes
 

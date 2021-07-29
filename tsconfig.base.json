@@ -20,6 +20,7 @@
       ],
       "@pe-test/celestial-store": ["libs/celestial-store/src/index.ts"],
       "@pe-test/celestial-web/home": ["libs/celestial-web/home/src/index.ts"],
+      "@pe-test/hooks": ["libs/hooks/src/index.ts"],
       "@pe-test/prisma-client": ["libs/prisma-client/src/index.ts"],
       "@pe-test/shared-models": ["libs/shared-models/src/index.ts"],
       "@pe-test/web-component-library": [
